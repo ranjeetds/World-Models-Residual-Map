@@ -1,0 +1,48 @@
+{
+  "systems_required_fields": [
+    "id",
+    "name",
+    "year",
+    "organizations",
+    "category",
+    "domains",
+    "modalities",
+    "action_conditioned",
+    "open_code",
+    "open_weights",
+    "evidence_level",
+    "residuals",
+    "evaluation_modes",
+    "urls",
+    "caveats"
+  ],
+  "benchmark_required_fields": [
+    "id",
+    "name",
+    "year",
+    "type",
+    "domains",
+    "tests",
+    "urls",
+    "limitations"
+  ],
+  "dataset_required_fields": [
+    "id",
+    "name",
+    "year",
+    "domains",
+    "modalities",
+    "access",
+    "urls",
+    "world_model_relevance"
+  ],
+  "allowed_evidence_levels": [
+    "official_open",
+    "official_partial",
+    "unofficial_open",
+    "closed_reference",
+    "dataset_or_benchmark"
+  ],
+  "allowed_residuals_file": "capability_families.json"
+}
+

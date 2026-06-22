@@ -1,0 +1,73 @@
+[
+  {
+    "id": "action_semantics",
+    "name": "Action Semantics",
+    "question": "Do different actions cause distinguishably correct futures?",
+    "minimum_evidence": ["action contrast", "intervention replay", "action-conditioned likelihood"],
+    "paper_layer": "Action validity"
+  },
+  {
+    "id": "state_persistence",
+    "name": "State Persistence",
+    "question": "Are object identity, inventory, map, and hidden state maintained over horizon?",
+    "minimum_evidence": ["long-horizon probes", "occlusion tests", "memory stress tests"],
+    "paper_layer": "State validity"
+  },
+  {
+    "id": "physical_law_extrapolation",
+    "name": "Physical Law Extrapolation",
+    "question": "Does the model generalize rules beyond visually similar cases?",
+    "minimum_evidence": ["OOD physics splits", "conservation tests", "contact or collision tests"],
+    "paper_layer": "Law validity"
+  },
+  {
+    "id": "counterfactual_reasoning",
+    "name": "Counterfactual Reasoning",
+    "question": "Can the model answer alternative-action or alternative-layout queries?",
+    "minimum_evidence": ["matched histories", "changed actions", "changed layouts", "measurable expected changes"],
+    "paper_layer": "Counterfactual validity"
+  },
+  {
+    "id": "uncertainty_calibration",
+    "name": "Uncertainty Calibration",
+    "question": "Does uncertainty grow in ambiguous, off-policy, or rare states?",
+    "minimum_evidence": ["calibration curves", "ensemble or distributional metrics", "abstention-error correlation"],
+    "paper_layer": "Uncertainty validity"
+  },
+  {
+    "id": "planning_utility",
+    "name": "Planning Utility",
+    "question": "Does using the world model improve decisions?",
+    "minimum_evidence": ["return", "regret", "planner-in-the-loop robustness", "policy improvement"],
+    "paper_layer": "Decision validity"
+  },
+  {
+    "id": "sim_to_real_transfer",
+    "name": "Sim-to-Real Transfer",
+    "question": "Do generated rollouts or policies help outside the learned simulator?",
+    "minimum_evidence": ["real-world validation", "sim-to-real gap", "recovery from perturbations"],
+    "paper_layer": "Decision validity"
+  },
+  {
+    "id": "spatial_consistency",
+    "name": "Spatial Consistency",
+    "question": "Is geometry metric and persistent across views and edits?",
+    "minimum_evidence": ["multi-view consistency", "occupancy or LiDAR checks", "mesh or scale checks"],
+    "paper_layer": "State validity"
+  },
+  {
+    "id": "social_physical_coupling",
+    "name": "Social-Physical Coupling",
+    "question": "Do agents respond to actions, information, norms, and physical constraints?",
+    "minimum_evidence": ["multi-agent scenarios", "strategic adaptation", "human-behavior validation"],
+    "paper_layer": "Law validity"
+  },
+  {
+    "id": "governance_readiness",
+    "name": "Governance Readiness",
+    "question": "Are validity limits, data provenance, and failure modes documented?",
+    "minimum_evidence": ["model cards", "datasheets", "risk register", "safety case"],
+    "paper_layer": "Governance"
+  }
+]
+

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "nuscenes",
+    "name": "nuScenes",
+    "year": 2020,
+    "domains": ["autonomous driving", "multi-sensor perception", "prediction"],
+    "modalities": ["camera", "LiDAR", "radar", "maps", "annotations"],
+    "access": "restricted_download",
+    "urls": {
+      "paper": "https://arxiv.org/abs/1903.11027",
+      "devkit": "https://github.com/nutonomy/nuscenes-devkit",
+      "project": "https://www.nuscenes.org/"
+    },
+    "world_model_relevance": "Common source for driving world models, trajectory prediction, occupancy, and scenario generation.",
+    "caveats": "Requires account and terms; logs are not equivalent to counterfactual closed-loop simulation."
+  },
+  {
+    "id": "waymo_open_dataset",
+    "name": "Waymo Open Dataset",
+    "year": 2020,
+    "domains": ["autonomous driving", "perception", "motion prediction"],
+    "modalities": ["camera", "LiDAR", "maps", "annotations", "scenarios"],
+    "access": "restricted_download",
+    "urls": {
+      "paper": "https://openaccess.thecvf.com/content_CVPR_2020/html/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.html",
+      "project": "https://waymo.com/open/about/",
+      "code": "https://github.com/waymo-research/waymo-open-dataset"
+    },
+    "world_model_relevance": "Important for multi-sensor driving prediction, evaluation, and scenario analysis.",
+    "caveats": "Terms restrict use; dataset page warns it is for research and not real-life vehicle performance evaluation."
+  },
+  {
+    "id": "behavior1k",
+    "name": "BEHAVIOR-1K",
+    "year": 2024,
+    "domains": ["embodied AI", "household robotics", "mobile manipulation"],
+    "modalities": ["simulation", "3D assets", "tasks", "object states"],
+    "access": "open_code_restricted_assets",
+    "urls": {
+      "paper": "https://arxiv.org/abs/2403.09227",
+      "project": "https://behavior.stanford.edu/index.html",
+      "code": "https://github.com/StanfordVL/BEHAVIOR-1K"
+    },
+    "world_model_relevance": "Tests long-horizon household tasks and physical-social interactions relevant to embodied world models.",
+    "caveats": "Task success in simulation does not automatically prove real-world transfer."
+  },
+  {
+    "id": "egoschema",
+    "name": "EgoSchema",
+    "year": 2023,
+    "domains": ["egocentric video", "human activity understanding"],
+    "modalities": ["video", "question-answer pairs"],
+    "access": "open_with_dataset_terms",
+    "urls": {
+      "project": "https://egoschema.github.io/",
+      "code": "https://github.com/egoschema/EgoSchema",
+      "kaggle": "https://www.kaggle.com/competitions/egoschema-public/overview"
+    },
+    "world_model_relevance": "Useful probe for long temporal memory and human activity understanding.",
+    "caveats": "QA benchmark, not an intervention simulator."
+  },
+  {
+    "id": "openeqa",
+    "name": "OpenEQA",
+    "year": 2024,
+    "domains": ["embodied AI", "real-world environments", "question answering"],
+    "modalities": ["episodic memory", "environment observations", "natural-language questions"],
+    "access": "open_with_terms",
+    "urls": {
+      "project": "https://open-eqa.github.io/",
+      "blog": "https://ai.meta.com/blog/openeqa-embodied-question-answering-robotics-ar-glasses/"
+    },
+    "world_model_relevance": "Evaluates grounded environment understanding from memory and exploration.",
+    "caveats": "Does not directly measure whether a model can roll out action-conditioned futures."
+  },
+  {
+    "id": "irassim_benchmark",
+    "name": "IRASim Benchmark",
+    "year": 2024,
+    "domains": ["robot manipulation", "video prediction"],
+    "modalities": ["real-robot videos", "action trajectories"],
+    "access": "open_or_gated_check_upstream",
+    "urls": {
+      "project": "https://gen-irasim.github.io/",
+      "code": "https://github.com/bytedance/IRASim"
+    },
+    "world_model_relevance": "Tests real-robot action-conditioned video simulation.",
+    "caveats": "Contact and control validity require task-level robot checks, not only video metrics."
+  },
+  {
+    "id": "atari_100k",
+    "name": "Atari 100k",
+    "year": 2020,
+    "domains": ["reinforcement learning", "game world models"],
+    "modalities": ["pixels", "actions", "rewards"],
+    "access": "open_environments",
+    "urls": {
+      "ale": "https://github.com/Farama-Foundation/Arcade-Learning-Environment"
+    },
+    "world_model_relevance": "Common benchmark for sample-efficient model-based RL and DIAMOND-style world-model agents.",
+    "caveats": "Game domain; results should not be overgeneralized to real-world physics."
+  },
+  {
+    "id": "dmcontrol",
+    "name": "DeepMind Control Suite",
+    "year": 2018,
+    "domains": ["continuous control", "model-based RL"],
+    "modalities": ["states", "pixels", "actions", "rewards"],
+    "access": "open_code",
+    "urls": {
+      "code": "https://github.com/google-deepmind/dm_control"
+    },
+    "world_model_relevance": "Common control suite for latent dynamics and model-based RL systems such as Dreamer and TD-MPC2.",
+    "caveats": "Simulated physics and relatively narrow tasks; not enough for deployment claims."
+  }
+]
+

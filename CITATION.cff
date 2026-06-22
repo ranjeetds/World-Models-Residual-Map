@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the repository snapshot and the accompanying survey paper."
+title: "World Models Residual Map"
+version: "0.1.0"
+date-released: "2026-06-10"
+authors:
+  - family-names: "Dhumal"
+    given-names: "Ranjeet"
+    affiliation: "Wolters Kluwer India Private Limited"
+keywords:
+  - world models
+  - embodied AI
+  - model-based reinforcement learning
+  - video generation
+  - robotics
+  - autonomous driving
+  - evaluation
+license: "CC-BY-4.0"
+repository-code: "https://github.com/ranjeetds/World-Models-Residual-Map"
+abstract: "A curated, versioned metadata artifact mapping world-model systems, open-source implementations, benchmarks, datasets, and residual capabilities."

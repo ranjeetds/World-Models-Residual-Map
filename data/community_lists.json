@@ -1,0 +1,52 @@
+[
+  {
+    "id": "awesome_world_models_general_knightnemo",
+    "name": "Awesome World Models",
+    "focus": "general world-model papers and resources",
+    "url": "https://github.com/knightnemo/Awesome-World-Models",
+    "how_to_use": "Cross-check broad coverage and discover missing systems; do not copy entries without verification."
+  },
+  {
+    "id": "awesome_world_models_general_jiahuadong",
+    "name": "Learning to Model the World survey repository",
+    "focus": "survey-related world-model resources",
+    "url": "https://github.com/JiahuaDong/Awesome-World-Models",
+    "how_to_use": "Useful related survey artifact for comparison."
+  },
+  {
+    "id": "awesome_driving_world_models",
+    "name": "Awesome World Models for Autonomous Driving",
+    "focus": "autonomous-driving world model papers",
+    "url": "https://github.com/LMD0311/Awesome-World-Model",
+    "how_to_use": "Use to expand driving-specific coverage."
+  },
+  {
+    "id": "awesome_driving_papers",
+    "name": "Awesome Papers World Models Autonomous Driving",
+    "focus": "driving world-model paper list",
+    "url": "https://github.com/chaytonmin/Awesome-Papers-World-Models-Autonomous-Driving",
+    "how_to_use": "Use to audit driving methods such as DriveDreamer, Panacea, Drive-WM, and OccWorld."
+  },
+  {
+    "id": "awesome_manipulation_world_models",
+    "name": "Awesome World Models for Manipulation",
+    "focus": "robot manipulation world models",
+    "url": "https://github.com/jacob-zietek/awesome-world-models-manipulation",
+    "how_to_use": "Use to expand manipulation-specific coverage."
+  },
+  {
+    "id": "awesome_embodied_world_model",
+    "name": "Awesome Embodied World Model",
+    "focus": "embodied and robotic world models",
+    "url": "https://github.com/tsinghua-fib-lab/Awesome-Embodied-World-Model",
+    "how_to_use": "Use to track newer embodied world-model releases."
+  },
+  {
+    "id": "awesome_interactive_video_world_model",
+    "name": "Awesome Interactive World Model",
+    "focus": "interactive video world modeling",
+    "url": "https://github.com/liujiuming123/Awesome-Interactive-World-Model",
+    "how_to_use": "Use to expand interactive-video coverage after verifying sources."
+  }
+]
+

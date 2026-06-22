@@ -1,0 +1,159 @@
+[
+  {
+    "id": "vbench",
+    "name": "VBench",
+    "year": 2024,
+    "type": "video_generation_benchmark",
+    "domains": ["text-to-video", "video generation"],
+    "tests": ["motion smoothness", "subject consistency", "temporal flickering", "prompt consistency", "aesthetic quality"],
+    "residuals": ["state_persistence"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/2311.17982",
+      "project": "https://vchitect.github.io/VBench-project/",
+      "code": "https://github.com/Vchitect/VBench"
+    },
+    "limitations": "Strong media-quality diagnostic but not sufficient for action semantics, counterfactual validity, or planning utility."
+  },
+  {
+    "id": "vbench2",
+    "name": "VBench 2.0 / VBench++",
+    "year": 2025,
+    "type": "video_generation_benchmark",
+    "domains": ["video generation", "intrinsic faithfulness"],
+    "tests": ["human fidelity", "controllability", "creativity", "physics", "commonsense"],
+    "residuals": ["state_persistence", "physical_law_extrapolation"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/2503.21755",
+      "pypi": "https://pypi.org/project/vbench2/"
+    },
+    "limitations": "Improves faithfulness evaluation but still does not by itself validate closed-loop decisions."
+  },
+  {
+    "id": "worldmodelbench",
+    "name": "WorldModelBench",
+    "year": 2025,
+    "type": "world_model_video_benchmark",
+    "domains": ["video generation", "world model evaluation"],
+    "tests": ["instruction following", "physical consistency", "world-model failures"],
+    "residuals": ["physical_law_extrapolation", "state_persistence", "action_semantics"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/2502.20694"
+    },
+    "limitations": "Useful for video-world-model failures; should be extended for robotics, driving, and planner-in-the-loop tests."
+  },
+  {
+    "id": "phyground",
+    "name": "PhyGround",
+    "year": 2026,
+    "type": "physical_reasoning_video_benchmark",
+    "domains": ["generative world models", "video generation", "physical reasoning"],
+    "tests": ["13 physical laws", "criteria-grounded prompts", "human annotations", "PhyJudge-9B"],
+    "residuals": ["physical_law_extrapolation", "state_persistence"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/2605.10806",
+      "project": "https://phyground.github.io/"
+    },
+    "limitations": "Law-specific video evaluation; not a substitute for robot or driving closed-loop validation."
+  },
+  {
+    "id": "physics_iq",
+    "name": "Physics-IQ",
+    "year": 2026,
+    "type": "physical_understanding_video_benchmark",
+    "domains": ["generative video", "physical reasoning"],
+    "tests": ["solid mechanics", "fluid dynamics", "optics", "thermodynamics", "magnetism"],
+    "residuals": ["physical_law_extrapolation"],
+    "urls": {
+      "project": "https://physics-iq.github.io/",
+      "code": "https://github.com/google-deepmind/physics-iq-benchmark"
+    },
+    "limitations": "Targets physics understanding in generated video; does not directly measure policy improvement."
+  },
+  {
+    "id": "egoschema",
+    "name": "EgoSchema",
+    "year": 2023,
+    "type": "long_form_video_language_benchmark",
+    "domains": ["egocentric video", "video QA", "human activity"],
+    "tests": ["long temporal reasoning", "multiple-choice QA", "egocentric understanding"],
+    "residuals": ["state_persistence", "social_physical_coupling"],
+    "urls": {
+      "paper": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/90ce332aff156b910b002ce4e6880dec-Abstract-Datasets_and_Benchmarks.html",
+      "project": "https://egoschema.github.io/",
+      "code": "https://github.com/egoschema/EgoSchema"
+    },
+    "limitations": "QA over video, not action-conditioned closed-loop simulation."
+  },
+  {
+    "id": "openeqa",
+    "name": "OpenEQA",
+    "year": 2024,
+    "type": "embodied_question_answering_benchmark",
+    "domains": ["embodied AI", "episodic memory", "active exploration"],
+    "tests": ["open-vocabulary questions", "episodic memory EQA", "active EQA", "LLM-Match scoring"],
+    "residuals": ["state_persistence", "spatial_consistency", "social_physical_coupling"],
+    "urls": {
+      "paper": "https://openaccess.thecvf.com/content/CVPR2024/papers/Majumdar_OpenEQA_Embodied_Question_Answering_in_the_Era_of_Foundation_Models_CVPR_2024_paper.pdf",
+      "project": "https://open-eqa.github.io/"
+    },
+    "limitations": "Embodied understanding benchmark; correct answers do not prove intervention-valid simulation."
+  },
+  {
+    "id": "behavior1k",
+    "name": "BEHAVIOR-1K",
+    "year": 2024,
+    "type": "embodied_ai_simulation_benchmark",
+    "domains": ["household activities", "robotics", "embodied AI"],
+    "tests": ["1000 everyday activities", "rigid objects", "deformables", "liquids", "long-horizon mobile manipulation"],
+    "residuals": ["planning_utility", "sim_to_real_transfer", "social_physical_coupling", "physical_law_extrapolation"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/2403.09227",
+      "project": "https://behavior.stanford.edu/index.html",
+      "code": "https://github.com/StanfordVL/BEHAVIOR-1K"
+    },
+    "limitations": "Simulation benchmark; learned world-model claims still need transfer and simulator-exploitation checks."
+  },
+  {
+    "id": "physion",
+    "name": "Physion",
+    "year": 2021,
+    "type": "physical_prediction_benchmark",
+    "domains": ["physical reasoning", "vision"],
+    "tests": ["physical prediction", "scenario-based dynamics", "human-machine comparison"],
+    "residuals": ["physical_law_extrapolation", "state_persistence"],
+    "urls": {
+      "project": "https://physion-benchmark.github.io/",
+      "code": "https://github.com/cogtoolslab/physics-benchmarking-neurips2021"
+    },
+    "limitations": "Useful physics probe; older than frontier video-generation systems and not action-policy oriented."
+  },
+  {
+    "id": "nuscenes_prediction",
+    "name": "nuScenes Prediction / Planning Evaluations",
+    "year": 2020,
+    "type": "autonomous_driving_evaluation",
+    "domains": ["autonomous driving", "trajectory prediction", "multi-sensor perception"],
+    "tests": ["minADE", "minFDE", "maps", "actors", "camera", "LiDAR"],
+    "residuals": ["spatial_consistency", "state_persistence", "sim_to_real_transfer"],
+    "urls": {
+      "paper": "https://arxiv.org/abs/1903.11027",
+      "devkit": "https://github.com/nutonomy/nuscenes-devkit"
+    },
+    "limitations": "Open-loop logs and devkits do not by themselves provide closed-loop counterfactual simulation."
+  },
+  {
+    "id": "waymo_open_dataset_eval",
+    "name": "Waymo Open Dataset Evaluation",
+    "year": 2020,
+    "type": "autonomous_driving_evaluation",
+    "domains": ["autonomous driving", "perception", "motion prediction"],
+    "tests": ["LiDAR", "camera", "3D detection", "motion prediction", "scenario evaluation"],
+    "residuals": ["spatial_consistency", "state_persistence", "sim_to_real_transfer"],
+    "urls": {
+      "paper": "https://openaccess.thecvf.com/content_CVPR_2020/html/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.html",
+      "code": "https://github.com/waymo-research/waymo-open-dataset"
+    },
+    "limitations": "Dataset and evaluation code aid validation, but a learned simulator must also be tested under interventions."
+  }
+]
+
