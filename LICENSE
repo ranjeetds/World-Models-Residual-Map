@@ -1,12 +1,17 @@
-Creative Commons Attribution 4.0 International
+World Models Residual Map License
 
 Copyright (c) 2026 Ranjeet Dhumal
 
-This repository's original metadata, documentation, and generated tables are licensed under the Creative Commons Attribution 4.0 International License.
+This repository uses a split license:
 
-You are free to share and adapt this work, provided appropriate credit is given.
+- Data, metadata, documentation, generated tables, and generated figures are
+  licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+  See LICENSE-DATA.
+- Source code and scripts are licensed under the MIT License. See LICENSE-CODE.
 
-This license does not apply to external repositories, papers, model weights, datasets, benchmarks, or third-party assets linked from this repository. Those remain governed by their respective upstream licenses and terms.
+Third-party papers, repositories, model weights, datasets, benchmarks, and other
+external resources linked from this repository are not relicensed here. They
+remain governed by their respective upstream licenses, model terms, dataset
+terms, acceptable-use policies, and citations.
 
-Full license text: https://creativecommons.org/licenses/by/4.0/
-
+SPDX-License-Identifier: CC-BY-4.0 AND MIT

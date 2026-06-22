@@ -1,0 +1,29 @@
+{
+  "title": "World Models Residual Map",
+  "upload_type": "dataset",
+  "description": "A curated, versioned metadata artifact mapping world-model systems, open-source implementations, benchmarks, datasets, and residual capabilities for the survey paper From Pattern Completion to Counterfactual Simulation.",
+  "creators": [
+    {
+      "name": "Dhumal, Ranjeet",
+      "affiliation": "Wolters Kluwer India Private Limited"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "world models",
+    "embodied AI",
+    "model-based reinforcement learning",
+    "video generation",
+    "robotics",
+    "autonomous driving",
+    "evaluation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ranjeetds/World-Models-Residual-Map",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

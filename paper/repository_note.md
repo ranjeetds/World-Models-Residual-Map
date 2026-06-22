@@ -8,18 +8,36 @@ Use this text after the GitHub repository and archived release exist.
 
 Before final publication, replace the final sentence with the actual DOI after an archived release exists.
 
-## BibTeX Template
+## Current GitHub Citation
 
-After the archive exists, fill in `url`, `doi`, and `note` with the actual public release details.
+Use this citation before a DOI is minted:
 
 ```bibtex
 @misc{dhumal2026worldmodelsresidualmap,
   title = {World Models Residual Map},
   author = {Dhumal, Ranjeet},
   year = {2026},
-  howpublished = {GitHub repository and archived dataset},
+  version = {0.1.0},
+  publisher = {GitHub},
+  howpublished = {GitHub repository},
   url = {https://github.com/ranjeetds/World-Models-Residual-Map},
-  doi = {},
-  note = {Version 0.1.0}
+  note = {Companion artifact for From Pattern Completion to Counterfactual Simulation}
+}
+```
+
+## Archived Release Template
+
+After Zenodo or another archive creates a DOI, replace the GitHub-only citation with:
+
+```bibtex
+@misc{dhumal2026worldmodelsresidualmap,
+  title = {World Models Residual Map},
+  author = {Dhumal, Ranjeet},
+  year = {2026},
+  version = {0.1.0},
+  publisher = {Zenodo},
+  url = {https://github.com/ranjeetds/World-Models-Residual-Map},
+  doi = {TO_BE_FILLED},
+  note = {Companion artifact for From Pattern Completion to Counterfactual Simulation}
 }
 ```

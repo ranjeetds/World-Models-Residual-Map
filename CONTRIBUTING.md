@@ -29,3 +29,11 @@ Avoid adding entries based only on social media posts, demos without source page
 - Openness status is conservative when uncertain.
 - Caveats are included for closed systems, unofficial implementations, or domain-limited results.
 - New systems are mapped to at least one residual capability family.
+
+## Licensing of Contributions
+
+By contributing, you agree that:
+
+- data, metadata, documentation, generated tables, and generated figures are contributed under CC BY 4.0;
+- source code and scripts are contributed under the MIT License;
+- linked third-party resources remain under their own upstream licenses and terms.

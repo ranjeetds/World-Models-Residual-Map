@@ -1,18 +1,43 @@
 # World Models Residual Map
 
+[![Data License: CC BY 4.0](https://img.shields.io/badge/data%20license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Code License: MIT](https://img.shields.io/badge/code%20license-MIT-green.svg)](LICENSE-CODE)
+[![Citation: CFF](https://img.shields.io/badge/citation-CFF-lightgrey.svg)](CITATION.cff)
+
 Companion artifact for the survey paper:
 
 > **From Pattern Completion to Counterfactual Simulation: A Survey of World Models as the Residual Frontier of Foundation AI**
 
 Author: **Ranjeet Dhumal**  
-Affiliation: **Senior Data Scientist, Wolters Kluwer India Private Limited**
-Repository: **https://github.com/ranjeetds/World-Models-Residual-Map**
+Affiliation: **Senior Data Scientist, Wolters Kluwer India Private Limited**  
+Repository: **https://github.com/ranjeetds/World-Models-Residual-Map**  
+Version: **0.1.0**  
+License: **CC BY 4.0 for data/docs/generated artifacts; MIT for scripts**
 
 This repository is a curated map of world-model systems, open-source implementations, open-weight releases, benchmarks, datasets, and evaluation criteria. It is intentionally kept as a single human-readable document so a reviewer can understand the artifact without opening JSON files.
 
 The core thesis is simple: world models should be compared by the residual capabilities they address after LLMs, vision models, and generative media models are accounted for. Those residuals include action semantics, state persistence, physical law extrapolation, counterfactual reasoning, uncertainty calibration, planning utility, sim-to-real transfer, spatial consistency, social-physical coupling, and governance readiness.
 
 The JSON files in `data/` remain the machine-readable backend; this README is generated from them.
+
+## Citation
+
+If this artifact supports your work, cite the frozen release used in your study. Until a DOI-backed archive exists, cite the public GitHub snapshot and include the version.
+
+```bibtex
+@misc{dhumal2026worldmodelsresidualmap,
+  title = {World Models Residual Map},
+  author = {Dhumal, Ranjeet},
+  year = {2026},
+  version = {0.1.0},
+  publisher = {GitHub},
+  howpublished = {GitHub repository},
+  url = {https://github.com/ranjeetds/World-Models-Residual-Map},
+  note = {Companion artifact for From Pattern Completion to Counterfactual Simulation: A Survey of World Models as the Residual Frontier of Foundation AI}
+}
+```
+
+GitHub also reads `CITATION.cff`, so the repository's **Cite this repository** button should expose the same citation metadata. After creating a Zenodo or institutional archive, replace the GitHub-only citation with the DOI-backed release citation.
 
 ## How to Use This Artifact
 
@@ -22,7 +47,7 @@ The JSON files in `data/` remain the machine-readable backend; this README is ge
 | Find runnable baselines | Open Code and Open Weight Systems | Code/weight status, domain, and caveat before attempting reproduction. |
 | Identify paper ideas | Research Gap Map | Missing capability, what to build, and what evidence would convince reviewers. |
 | Extend the catalog | Coding Methodology and Contributing | Required fields, evidence levels, residual definitions, and validation commands. |
-| Prepare a citable release | Public Release Quality Gates | Validation, generated artifacts, DOI, and citation metadata. |
+| Prepare a citable release | Citation and Public Release Quality Gates | Validation, generated artifacts, DOI, and citation metadata. |
 
 ## Headline Findings
 
@@ -632,7 +657,7 @@ Recommended submission workflow:
 
 ## Public Release Quality Gates
 
-Before creating the public GitHub repository or a Zenodo archive, run these checks:
+Before tagging a release or creating a Zenodo archive, run these checks:
 
 - `python3 scripts/validate_artifact.py` passes with no warnings.
 - `python3 scripts/export_tables.py` and `python3 scripts/export_figures.py` have been run after the last data edit.
@@ -655,14 +680,20 @@ scripts/export_figures.py          # regenerates the residual coverage figure
 generated/tables/open_systems_table.tex
 generated/figures/residual_heatmap.tikz
 CITATION.cff
+.zenodo.json
+CHANGELOG.md
 CONTRIBUTING.md
 LICENSE
+LICENSE-DATA
+LICENSE-CODE
 paper/repository_note.md
 ```
 
 ## License and Disclaimer
 
-This repository's original metadata, documentation, and generated tables are licensed under CC BY 4.0. External repositories, papers, model weights, datasets, and benchmarks remain governed by their upstream licenses and terms.
+This repository uses a split license. Original data, metadata, documentation, generated tables, and generated figures are licensed under CC BY 4.0. Source code and scripts are licensed under the MIT License.
+
+External repositories, papers, model weights, datasets, and benchmarks remain governed by their upstream licenses and terms.
 
 This artifact is a research index, not an endorsement of any model's safety, licensing terms, or deployment readiness. Always review upstream licenses, acceptable-use policies, model cards, and dataset terms before use.
 
