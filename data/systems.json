@@ -36,6 +36,17 @@
     "evidence_level": "official_open",
     "license": "Apache-2.0",
     "residuals": ["action_semantics", "planning_utility", "uncertainty_calibration"],
+    "residual_evidence": {
+      "uncertainty_calibration": {
+        "source_url": "https://arxiv.org/abs/1811.04551",
+        "locator": "RSSM stochastic-plus-deterministic latent; latent-overshooting objective; CEM planning over imagined latent rollouts",
+        "summary": "Represents latent-state uncertainty through a stochastic RSSM path and plans over sampled imagined rollouts.",
+        "evidence_type": "peer_reviewed_paper",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Distributional-latent evidence; no explicit calibration curve or abstention metric is reported, so it meets only the distributional-metric threshold."
+      }
+    },
     "evaluation_modes": ["latent planning", "environment return", "open-loop prediction"],
     "urls": {
       "paper": "https://arxiv.org/abs/1811.04551",
@@ -59,6 +70,17 @@
     "evidence_level": "official_open",
     "license": "MIT",
     "residuals": ["action_semantics", "planning_utility", "uncertainty_calibration", "sim_to_real_transfer"],
+    "residual_evidence": {
+      "uncertainty_calibration": {
+        "source_url": "https://www.nature.com/articles/s41586-025-08744-2",
+        "locator": "Categorical stochastic latents; symlog two-hot distributional value learning; fixed-hyperparameter robustness across 150-plus tasks",
+        "summary": "Uses distributional latent and value representations that stay stable across many domains without per-task tuning.",
+        "evidence_type": "peer_reviewed_paper",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Distributional modeling rather than reported calibration curves or abstention-error correlation."
+      }
+    },
     "evaluation_modes": ["imagined rollouts", "closed-loop control", "environment return"],
     "urls": {
       "paper": "https://www.nature.com/articles/s41586-025-08744-2",
@@ -82,6 +104,17 @@
     "evidence_level": "unofficial_open",
     "license": "varies",
     "residuals": ["planning_utility", "counterfactual_reasoning", "action_semantics"],
+    "residual_evidence": {
+      "counterfactual_reasoning": {
+        "source_url": "https://www.nature.com/articles/s41586-020-03051-4",
+        "locator": "MCTS planning over the learned value-equivalent model; evaluation of alternative action sequences from matched histories",
+        "summary": "Searches alternative action sequences through a learned model, scoring what different actions would yield.",
+        "evidence_type": "peer_reviewed_paper",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Weak, planning-based counterfactual only (alternative actions, no latent-state or layout intervention). The method is peer-reviewed; the coded system is a community reimplementation."
+      }
+    },
     "evaluation_modes": ["tree search", "game performance", "value prediction"],
     "urls": {
       "paper": "https://www.nature.com/articles/s41586-020-03051-4",
@@ -105,6 +138,17 @@
     "evidence_level": "official_open",
     "license": "MIT",
     "residuals": ["planning_utility", "action_semantics", "uncertainty_calibration", "sim_to_real_transfer"],
+    "residual_evidence": {
+      "uncertainty_calibration": {
+        "source_url": "https://arxiv.org/abs/2310.16828",
+        "locator": "Ensemble of value functions used during MPPI planning over the learned latent model",
+        "summary": "Maintains a value-function ensemble whose disagreement provides epistemic uncertainty used in planning.",
+        "evidence_type": "peer_reviewed_paper",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Ensemble-based uncertainty; not reported as calibration curves."
+      }
+    },
     "evaluation_modes": ["model predictive control", "multi-task evaluation", "benchmarks"],
     "urls": {
       "paper": "https://arxiv.org/abs/2310.16828",
@@ -396,6 +440,17 @@
     "evidence_level": "official_open",
     "license": "see upstream",
     "residuals": ["action_semantics", "sim_to_real_transfer", "state_persistence", "physical_law_extrapolation"],
+    "residual_evidence": {
+      "physical_law_extrapolation": {
+        "source_url": "https://arxiv.org/abs/2406.14540",
+        "locator": "Trajectory-conditioned manipulation video prediction; contact-rich rollouts evaluated for physical accuracy",
+        "summary": "Predicts fine-grained, contact-rich manipulation dynamics conditioned on robot action trajectories.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 3,
+        "note": "Evidence is manipulation and contact fidelity, not conservation-law or OOD-physics split testing; meets the contact-test threshold only."
+      }
+    },
     "evaluation_modes": ["robot video prediction", "benchmark", "human evaluation"],
     "urls": {
       "paper": "https://arxiv.org/abs/2406.14540",
@@ -464,6 +519,26 @@
     "evidence_level": "official_open",
     "license": "see upstream",
     "residuals": ["sim_to_real_transfer", "physical_law_extrapolation", "action_semantics", "governance_readiness"],
+    "residual_evidence": {
+      "physical_law_extrapolation": {
+        "source_url": "https://arxiv.org/abs/2501.03575",
+        "locator": "Physical-AI world-foundation-model pretraining and tokenizer; physically grounded video prediction",
+        "summary": "A physical-AI-oriented world foundation model evaluated on physically grounded video prediction.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 3,
+        "note": "Platform-level physical-AI framing; not an isolated OOD physical-law extrapolation benchmark."
+      },
+      "governance_readiness": {
+        "source_url": "https://arxiv.org/abs/2501.03575",
+        "locator": "Cosmos Guardrails pre-guard and post-guard safety pipeline documented in the technical report",
+        "summary": "Ships a documented content-safety guardrail pipeline and responsible-use guidance.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Governance evidence is a vendor-documented guardrail system; no external audit or third-party safety case."
+      }
+    },
     "evaluation_modes": ["foundation model platform", "tooling", "customization workflows"],
     "urls": {
       "paper": "https://arxiv.org/abs/2501.03575",
@@ -487,6 +562,17 @@
     "evidence_level": "official_open",
     "license": "Apache-2.0 code; check model terms",
     "residuals": ["physical_law_extrapolation", "sim_to_real_transfer", "action_semantics"],
+    "residual_evidence": {
+      "physical_law_extrapolation": {
+        "source_url": "https://research.nvidia.com/labs/dir/cosmos-predict2/",
+        "locator": "NVIDIA Cosmos Predict-2 project and model documentation",
+        "summary": "Physics-oriented video world model in the Cosmos Predict line, coded from official project documentation.",
+        "evidence_type": "official_docs",
+        "confidence": "low",
+        "capability_level": 2,
+        "note": "No peer-reviewed or preprint paper; coded from NVIDIA project docs and the code release, so it is weaker evidence than the paper-backed Cosmos entries."
+      }
+    },
     "evaluation_modes": ["video generation", "custom fine-tuning", "physical AI workflows"],
     "urls": {
       "project": "https://research.nvidia.com/labs/dir/cosmos-predict2/",
@@ -509,6 +595,26 @@
     "evidence_level": "official_open",
     "license": "Apache-2.0 code; check model terms",
     "residuals": ["physical_law_extrapolation", "sim_to_real_transfer", "spatial_consistency", "governance_readiness"],
+    "residual_evidence": {
+      "physical_law_extrapolation": {
+        "source_url": "https://arxiv.org/abs/2511.00062",
+        "locator": "Cosmos Predict-2.5 technical report; physics-aligned world prediction and post-training",
+        "summary": "Successor Cosmos Predict model with physics-aligned world prediction and open code and weights.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 3,
+        "note": "Physical-AI platform framing; not an isolated conservation or OOD-physics benchmark."
+      },
+      "governance_readiness": {
+        "source_url": "https://arxiv.org/abs/2511.00062",
+        "locator": "Documented guardrails and responsible-use guidance in the Cosmos Predict-2.5 release",
+        "summary": "Continues the Cosmos guardrail and safety documentation with an open release.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Vendor-documented safety tooling; no independent audit."
+      }
+    },
     "evaluation_modes": ["Text2World", "Image2World", "Video2World", "benchmarks"],
     "urls": {
       "paper": "https://arxiv.org/abs/2511.00062",
@@ -532,6 +638,26 @@
     "evidence_level": "official_partial",
     "license": "see upstream",
     "residuals": ["action_semantics", "physical_law_extrapolation", "sim_to_real_transfer", "governance_readiness"],
+    "residual_evidence": {
+      "physical_law_extrapolation": {
+        "source_url": "https://arxiv.org/abs/2606.02800",
+        "locator": "Cosmos 3 technical report; physical-AI world prediction across modalities",
+        "summary": "Latest Cosmos world-foundation model with physics-oriented, omnimodal prediction.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Official-partial release; platform-level physical framing, not an isolated physics-law benchmark."
+      },
+      "governance_readiness": {
+        "source_url": "https://arxiv.org/abs/2606.02800",
+        "locator": "Guardrail and safety documentation in the Cosmos 3 report",
+        "summary": "Documents safety guardrails consistent with the rest of the Cosmos line.",
+        "evidence_type": "preprint",
+        "confidence": "medium",
+        "capability_level": 2,
+        "note": "Vendor-documented governance; partial release limits independent verification."
+      }
+    },
     "evaluation_modes": ["omnimodal generation", "physical AI benchmarks", "vendor reports"],
     "urls": {
       "paper": "https://arxiv.org/abs/2606.02800",
@@ -642,6 +768,26 @@
     "evidence_level": "closed_reference",
     "license": "not open",
     "residuals": ["action_semantics", "counterfactual_reasoning", "sim_to_real_transfer", "spatial_consistency", "governance_readiness"],
+    "residual_evidence": {
+      "counterfactual_reasoning": {
+        "source_url": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/",
+        "locator": "Waymo product blog (February 2026) describing driving-scenario and rare-event what-if simulation",
+        "summary": "Product announcement describes generating alternative driving scenarios for simulation and testing.",
+        "evidence_type": "company_report",
+        "confidence": "low",
+        "capability_level": 1,
+        "note": "Closed commercial system; counterfactual capability is a product-blog claim, not independently reproducible. Lowest evidence tier."
+      },
+      "governance_readiness": {
+        "source_url": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/",
+        "locator": "Waymo product blog (February 2026) safety-simulation framing",
+        "summary": "Frames the model within Waymo safety-validation and simulation processes.",
+        "evidence_type": "company_report",
+        "confidence": "low",
+        "capability_level": 1,
+        "note": "Governance framing from a product blog; no public model card, datasheet, or external audit."
+      }
+    },
     "evaluation_modes": ["vendor reports", "driving simulation", "rare event generation"],
     "urls": {
       "project": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/"

@@ -15,9 +15,9 @@ Use this citation before a DOI is minted:
 ```bibtex
 @misc{dhumal2026worldmodelsresidualmap,
   title = {World Models Residual Map},
-  author = {Dhumal, Ranjeet},
+  author = {Dhumal, Ranjeet and Aerts, Koen},
   year = {2026},
-  version = {0.1.0},
+  version = {0.2.0},
   publisher = {GitHub},
   howpublished = {GitHub repository},
   url = {https://github.com/ranjeetds/World-Models-Residual-Map},
@@ -32,9 +32,9 @@ After Zenodo or another archive creates a DOI, replace the GitHub-only citation 
 ```bibtex
 @misc{dhumal2026worldmodelsresidualmap,
   title = {World Models Residual Map},
-  author = {Dhumal, Ranjeet},
+  author = {Dhumal, Ranjeet and Aerts, Koen},
   year = {2026},
-  version = {0.1.0},
+  version = {0.2.0},
   publisher = {Zenodo},
   url = {https://github.com/ranjeetds/World-Models-Residual-Map},
   doi = {TO_BE_FILLED},

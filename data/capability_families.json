@@ -18,6 +18,7 @@
     "name": "Physical Law Extrapolation",
     "question": "Does the model generalize rules beyond visually similar cases?",
     "minimum_evidence": ["OOD physics splits", "conservation tests", "contact or collision tests"],
+    "boundary": "Counts only when physical validity is tested beyond visually similar cases (OOD physics splits, conservation checks, or contact/collision tests). A general physical-AI or physics-realism marketing claim, or in-distribution visual plausibility alone, does not count.",
     "paper_layer": "Law validity"
   },
   {
@@ -25,6 +26,7 @@
     "name": "Counterfactual Reasoning",
     "question": "Can the model answer alternative-action or alternative-layout queries?",
     "minimum_evidence": ["matched histories", "changed actions", "changed layouts", "measurable expected changes"],
+    "boundary": "Counts only when the model answers matched-history alternative-action or alternative-layout queries with measurable expected changes. Action-sequence search or planning over a learned model (e.g., MCTS) is weak, planning-based counterfactual evidence and is flagged and credited at reduced confidence; trajectory optimization without an intervention query does not count.",
     "paper_layer": "Counterfactual validity"
   },
   {
@@ -32,6 +34,7 @@
     "name": "Uncertainty Calibration",
     "question": "Does uncertainty grow in ambiguous, off-policy, or rare states?",
     "minimum_evidence": ["calibration curves", "ensemble or distributional metrics", "abstention-error correlation"],
+    "boundary": "Counts when the model exposes distributional or ensemble uncertainty tied to error; full credit requires calibration curves, ensemble/distributional metrics, or abstention-error correlation. A deterministic prediction, or a stochastic latent with no reported uncertainty behaviour, does not count.",
     "paper_layer": "Uncertainty validity"
   },
   {
@@ -67,6 +70,7 @@
     "name": "Governance Readiness",
     "question": "Are validity limits, data provenance, and failure modes documented?",
     "minimum_evidence": ["model cards", "datasheets", "risk register", "safety case"],
+    "boundary": "Counts when validity limits, data provenance, or failure modes are documented via model cards, datasheets, a risk register, a safety case, or a shipped guardrail/safety system. A general safety statement without an artifact does not count; vendor-documented tooling without external audit is credited at low confidence.",
     "paper_layer": "Governance"
   }
 ]

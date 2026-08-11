@@ -13,8 +13,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 TABLES = ROOT / "generated" / "tables"
-VERSION = "0.1.0"
-RELEASE_DATE = "2026-06-22"
+VERSION = "0.2.0"
+RELEASE_DATE = "2026-08-11"
 REPO_URL = "https://github.com/ranjeetds/World-Models-Residual-Map"
 PAPER_TITLE = "From Pattern Completion to Counterfactual Simulation: A Survey of World Models as the Residual Frontier of Foundation AI"
 
@@ -220,7 +220,7 @@ def citation_section() -> list[str]:
         "```bibtex",
         "@misc{dhumal2026worldmodelsresidualmap,",
         "  title = {World Models Residual Map},",
-        "  author = {Dhumal, Ranjeet},",
+        "  author = {Dhumal, Ranjeet and Aerts, Koen},",
         "  year = {2026},",
         f"  version = {{{VERSION}}},",
         "  publisher = {GitHub},",
@@ -565,8 +565,7 @@ def readme(
         "",
         f"> **{PAPER_TITLE}**",
         "",
-        "Author: **Ranjeet Dhumal**  ",
-        "Affiliation: **Senior Data Scientist, Wolters Kluwer India Private Limited**  ",
+        "Authors: **Ranjeet Dhumal** (Senior Data Scientist, Wolters Kluwer India Private Limited); **Koen Aerts** (Senior Application & Product Architect, Wolters Kluwer, Mechelen, Belgium)  ",
         f"Repository: **{REPO_URL}**  ",
         f"Version: **{VERSION}**  ",
         "License: **CC BY 4.0 for data/docs/generated artifacts; MIT for scripts**",

@@ -77,6 +77,9 @@ def main() -> int:
     families = load_json(DATA / "capability_families.json")
     residual_ids = {entry["id"] for entry in families}
     allowed_evidence = set(schema["allowed_evidence_levels"])
+    evidence_record_fields = schema.get("residual_evidence_record_fields", [])
+    allowed_evidence_types = set(schema.get("allowed_evidence_types", []))
+    allowed_confidence = set(schema.get("allowed_confidence_levels", []))
 
     systems, errors = validate_list_file("systems.json", schema["systems_required_fields"])
     benchmarks, benchmark_errors = validate_list_file("benchmarks.json", schema["benchmark_required_fields"])
@@ -101,6 +104,30 @@ def main() -> int:
         for residual in residuals:
             if residual not in residual_ids:
                 errors.append(f"systems.json:{entry['id']} unknown residual '{residual}'")
+        evidence_map = entry.get("residual_evidence")
+        if evidence_map is not None:
+            if not isinstance(evidence_map, dict):
+                errors.append(f"systems.json:{entry['id']} residual_evidence must be an object")
+            else:
+                for rkey, record in evidence_map.items():
+                    if rkey not in residuals:
+                        errors.append(f"systems.json:{entry['id']} residual_evidence key '{rkey}' is not in residuals")
+                    if not isinstance(record, dict):
+                        errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] must be an object")
+                        continue
+                    for field in evidence_record_fields:
+                        if field not in record:
+                            errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] missing '{field}'")
+                    if record.get("evidence_type") not in allowed_evidence_types:
+                        errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] invalid evidence_type {record.get('evidence_type')!r}")
+                    if record.get("confidence") not in allowed_confidence:
+                        errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] invalid confidence {record.get('confidence')!r}")
+                    src = record.get("source_url", "")
+                    if not isinstance(src, str) or not src.startswith(("http://", "https://")):
+                        errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] source_url is invalid: {src!r}")
+                    level = record.get("capability_level")
+                    if level is not None and (not isinstance(level, int) or isinstance(level, bool) or level < 0 or level > 5):
+                        errors.append(f"systems.json:{entry['id']} residual_evidence['{rkey}'] capability_level must be an integer 0-5: {level!r}")
 
     for entry in benchmarks:
         residuals = entry.get("residuals", [])

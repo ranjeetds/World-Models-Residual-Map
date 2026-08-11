@@ -8,10 +8,9 @@ Companion artifact for the survey paper:
 
 > **From Pattern Completion to Counterfactual Simulation: A Survey of World Models as the Residual Frontier of Foundation AI**
 
-Author: **Ranjeet Dhumal**  
-Affiliation: **Senior Data Scientist, Wolters Kluwer India Private Limited**  
+Authors: **Ranjeet Dhumal** (Senior Data Scientist, Wolters Kluwer India Private Limited); **Koen Aerts** (Senior Application & Product Architect, Wolters Kluwer, Mechelen, Belgium)  
 Repository: **https://github.com/ranjeetds/World-Models-Residual-Map**  
-Version: **0.1.0**  
+Version: **0.2.0**  
 License: **CC BY 4.0 for data/docs/generated artifacts; MIT for scripts**
 
 This repository is a curated map of world-model systems, open-source implementations, open-weight releases, benchmarks, datasets, and evaluation criteria. It is intentionally kept as a single human-readable document so a reviewer can understand the artifact without opening JSON files.
@@ -27,9 +26,9 @@ If this artifact supports your work, cite the frozen release used in your study.
 ```bibtex
 @misc{dhumal2026worldmodelsresidualmap,
   title = {World Models Residual Map},
-  author = {Dhumal, Ranjeet},
+  author = {Dhumal, Ranjeet and Aerts, Koen},
   year = {2026},
-  version = {0.1.0},
+  version = {0.2.0},
   publisher = {GitHub},
   howpublished = {GitHub repository},
   url = {https://github.com/ranjeetds/World-Models-Residual-Map},

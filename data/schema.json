@@ -43,6 +43,32 @@
     "closed_reference",
     "dataset_or_benchmark"
   ],
+  "residual_evidence_optional_field": "residual_evidence",
+  "residual_evidence_record_fields": [
+    "source_url",
+    "locator",
+    "summary",
+    "evidence_type",
+    "confidence",
+    "note"
+  ],
+  "allowed_evidence_types": [
+    "peer_reviewed_paper",
+    "preprint",
+    "official_docs",
+    "company_report",
+    "unofficial_impl",
+    "independent_repro"
+  ],
+  "allowed_confidence_levels": ["high", "medium", "low"],
+  "capability_level_scale": {
+    "0": "no evidence",
+    "1": "stated objective",
+    "2": "qualitative demonstration",
+    "3": "quantitative in-domain evidence",
+    "4": "OOD or closed-loop evidence",
+    "5": "independently reproduced evidence"
+  },
   "allowed_residuals_file": "capability_families.json"
 }
 

@@ -1,12 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the repository snapshot and the accompanying survey paper."
 title: "World Models Residual Map"
-version: "0.1.0"
-date-released: "2026-06-22"
+version: "0.2.0"
+date-released: "2026-08-11"
 authors:
   - family-names: "Dhumal"
     given-names: "Ranjeet"
     affiliation: "Wolters Kluwer India Private Limited"
+  - family-names: "Aerts"
+    given-names: "Koen"
+    affiliation: "Wolters Kluwer, Mechelen, Belgium"
 url: "https://github.com/ranjeetds/World-Models-Residual-Map"
 repository-code: "https://github.com/ranjeetds/World-Models-Residual-Map"
 keywords:
@@ -26,6 +29,9 @@ preferred-citation:
     - family-names: "Dhumal"
       given-names: "Ranjeet"
       affiliation: "Wolters Kluwer India Private Limited"
+    - family-names: "Aerts"
+      given-names: "Koen"
+      affiliation: "Wolters Kluwer, Mechelen, Belgium"
   year: 2026
-  version: "0.1.0"
+  version: "0.2.0"
   url: "https://github.com/ranjeetds/World-Models-Residual-Map"
